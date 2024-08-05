@@ -33,6 +33,11 @@ struct TaskListView: View {
                                 isEditViewPresented = true
                             }
                         }
+                        
+                        // MARK: Delete Item From List
+                        .onDelete(perform: vm.deleteTask)
+                        
+                        // MARK: Edit View
                         .sheet(isPresented: $isEditViewPresented, content: {
                             EmptyView()
                         })
