@@ -26,6 +26,7 @@ struct TaskListView: View {
                                 vm.isCompletedTask(task: task)
                             }
                             .onTapGesture {
+                                vm.selectedTask = task
                                 isEditViewPresented = true
                             }
                         }
@@ -35,7 +36,9 @@ struct TaskListView: View {
                         
                         // MARK: Edit View
                         .sheet(isPresented: $isEditViewPresented, content: {
-                            EditTaskView()
+                            if let taskToEdit = vm.selectedTask {
+                                EditTaskView(task: taskToEdit)
+                            }
                         })
                     }
                     .listStyle(.plain)
