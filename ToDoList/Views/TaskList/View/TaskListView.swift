@@ -11,6 +11,7 @@ struct TaskListView: View {
     
     // MARK: - Properties
     @EnvironmentObject var vm: ViewModel
+    @State private var isEditViewPresented = false
     
     // MARK: - Body
     var body: some View {
@@ -25,8 +26,16 @@ struct TaskListView: View {
                 VStack {
                     List {
                         ForEach(vm.tasks) { task in
-                            Text(task.title)
+                            TaskRow(model: task) {
+                                vm.isCompletedTask(task: task)
+                            }
+                            .onTapGesture {
+                                isEditViewPresented = true
+                            }
                         }
+                        .sheet(isPresented: $isEditViewPresented, content: {
+                            EmptyView()
+                        })
                     }
                     .listStyle(.plain)
                 }
