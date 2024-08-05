@@ -17,11 +17,7 @@ struct AddTaskView: View {
     var body: some View {
         ZStack {
             // MARK: Background
-            LinearGradient(
-                colors: [Color.toDoListBackground1, Color.toDoListBackground2],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing)
-                .ignoresSafeArea()
+            BackgroundView()
             
             VStack {
                 // MARK: Text Field

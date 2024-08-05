@@ -22,6 +22,7 @@
 		00D392A42C61398700D69684 /* EditTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D392A32C61398700D69684 /* EditTaskView.swift */; };
 		00D392A72C613B4400D69684 /* CustomeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D392A62C613B4400D69684 /* CustomeTextField.swift */; };
 		00D392A92C613B5F00D69684 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D392A82C613B5F00D69684 /* CustomButton.swift */; };
+		00D392AB2C61476800D69684 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D392AA2C61476800D69684 /* BackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		00D392A32C61398700D69684 /* EditTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskView.swift; sourceTree = "<group>"; };
 		00D392A62C613B4400D69684 /* CustomeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeTextField.swift; sourceTree = "<group>"; };
 		00D392A82C613B5F00D69684 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		00D392AA2C61476800D69684 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 			children = (
 				00D392A62C613B4400D69684 /* CustomeTextField.swift */,
 				00D392A82C613B5F00D69684 /* CustomButton.swift */,
+				00D392AA2C61476800D69684 /* BackgroundView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				00D392972C5E52A300D69684 /* TaskListView.swift in Sources */,
 				00D392A12C611A2A00D69684 /* TaskRow.swift in Sources */,
 				00D392992C5E656900D69684 /* AddTaskView.swift in Sources */,
+				00D392AB2C61476800D69684 /* BackgroundView.swift in Sources */,
 				00D3927C2C5E493200D69684 /* ToDoListApp.swift in Sources */,
 				00D392A92C613B5F00D69684 /* CustomButton.swift in Sources */,
 				00D392952C5E4E9200D69684 /* Color+Extension.swift in Sources */,

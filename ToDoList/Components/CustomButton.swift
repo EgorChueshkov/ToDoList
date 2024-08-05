@@ -18,7 +18,6 @@ struct CustomButton: View {
     // MARK: - Body
     var body: some View {
         Button {
-            //vm.addTask(task: vm.newTask)
             action()
             dismiss()
         } label: {

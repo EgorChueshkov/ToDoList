@@ -18,11 +18,7 @@ struct TaskListView: View {
         NavigationView {
             ZStack {
                 // MARK: Background
-                LinearGradient(
-                    colors: [Color.toDoListBackground1, Color.toDoListBackground2],
-                    startPoint: .topLeading,
-                    endPoint: .bottomTrailing)
-                    .ignoresSafeArea()
+                BackgroundView()
                 VStack {
                     List {
                         ForEach(vm.tasks) { task in
@@ -39,7 +35,7 @@ struct TaskListView: View {
                         
                         // MARK: Edit View
                         .sheet(isPresented: $isEditViewPresented, content: {
-                            EmptyView()
+                            EditTaskView()
                         })
                     }
                     .listStyle(.plain)
