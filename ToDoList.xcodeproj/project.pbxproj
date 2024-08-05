@@ -19,6 +19,9 @@
 		00D392992C5E656900D69684 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D392982C5E656900D69684 /* AddTaskView.swift */; };
 		00D3929B2C5E737E00D69684 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D3929A2C5E737E00D69684 /* ViewModel.swift */; };
 		00D392A12C611A2A00D69684 /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D392A02C611A2A00D69684 /* TaskRow.swift */; };
+		00D392A42C61398700D69684 /* EditTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D392A32C61398700D69684 /* EditTaskView.swift */; };
+		00D392A72C613B4400D69684 /* CustomeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D392A62C613B4400D69684 /* CustomeTextField.swift */; };
+		00D392A92C613B5F00D69684 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D392A82C613B5F00D69684 /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,9 @@
 		00D392982C5E656900D69684 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		00D3929A2C5E737E00D69684 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		00D392A02C611A2A00D69684 /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
+		00D392A32C61398700D69684 /* EditTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskView.swift; sourceTree = "<group>"; };
+		00D392A62C613B4400D69684 /* CustomeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeTextField.swift; sourceTree = "<group>"; };
+		00D392A82C613B5F00D69684 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,7 @@
 				00D3928D2C5E4BC000D69684 /* Views */,
 				00D3928E2C5E4BCE00D69684 /* ViewModel */,
 				00D392902C5E4BED00D69684 /* Model */,
+				00D392A52C613AD400D69684 /* Components */,
 				00D392932C5E4DE900D69684 /* Extensions */,
 				00D3927F2C5E493300D69684 /* Assets.xcassets */,
 				00D392812C5E493300D69684 /* Preview Content */,
@@ -94,6 +101,7 @@
 			children = (
 				00D3929C2C6118DD00D69684 /* TaskList */,
 				00D3929F2C61195E00D69684 /* AddTask */,
+				00D392A22C61394C00D69684 /* EditTask */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -153,6 +161,23 @@
 				00D392982C5E656900D69684 /* AddTaskView.swift */,
 			);
 			path = AddTask;
+			sourceTree = "<group>";
+		};
+		00D392A22C61394C00D69684 /* EditTask */ = {
+			isa = PBXGroup;
+			children = (
+				00D392A32C61398700D69684 /* EditTaskView.swift */,
+			);
+			path = EditTask;
+			sourceTree = "<group>";
+		};
+		00D392A52C613AD400D69684 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				00D392A62C613B4400D69684 /* CustomeTextField.swift */,
+				00D392A82C613B5F00D69684 /* CustomButton.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,13 +252,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00D392A42C61398700D69684 /* EditTaskView.swift in Sources */,
 				00D392922C5E4D3700D69684 /* Model.swift in Sources */,
 				00D3927E2C5E493200D69684 /* ContentView.swift in Sources */,
 				00D392972C5E52A300D69684 /* TaskListView.swift in Sources */,
 				00D392A12C611A2A00D69684 /* TaskRow.swift in Sources */,
 				00D392992C5E656900D69684 /* AddTaskView.swift in Sources */,
 				00D3927C2C5E493200D69684 /* ToDoListApp.swift in Sources */,
+				00D392A92C613B5F00D69684 /* CustomButton.swift in Sources */,
 				00D392952C5E4E9200D69684 /* Color+Extension.swift in Sources */,
+				00D392A72C613B4400D69684 /* CustomeTextField.swift in Sources */,
 				00D3929B2C5E737E00D69684 /* ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

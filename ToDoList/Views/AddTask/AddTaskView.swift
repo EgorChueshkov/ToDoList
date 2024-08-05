@@ -25,23 +25,11 @@ struct AddTaskView: View {
             
             VStack {
                 // MARK: Text Field
-                TextField("Enter Your New Task", text: $vm.newTask)
-                    .font(.headline)
-                    .padding()
-                    .background(Color.toDoListPrimary.opacity(0.15))
-                    .cornerRadius(10)
+                CustomeTextField(placeholder: "Enter Your New Task")
+                
                 // MARK: Add Task Button
-                Button {
+                CustomButton(titleButton: "Add Task") {
                     vm.addTask(task: vm.newTask)
-                    dismiss()
-                } label: {
-                    Text("Add Task")
-                        .font(.headline)
-                        .padding()
-                        .foregroundColor(Color.toDoListBackground1)
-                        .frame(maxWidth: .infinity)
-                        .background(Color.toDoListAccent)
-                        .cornerRadius(10)
                 }
                 
                 Spacer()
