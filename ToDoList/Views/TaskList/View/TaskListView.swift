@@ -20,28 +20,37 @@ struct TaskListView: View {
                 // MARK: Background
                 BackgroundView()
                 VStack {
-                    List {
-                        ForEach(vm.tasks) { task in
-                            TaskRow(model: task) {
-                                vm.isCompletedTask(task: task)
+                    
+                    if vm.tasks.isEmpty {
+                        
+                        // MARK: Empty List
+                        NoTasksView()
+                    } else {
+                        
+                        // MARK: List Of Tasks
+                        List {
+                            ForEach(vm.tasks) { task in
+                                TaskRow(model: task) {
+                                    vm.isCompletedTask(task: task)
+                                }
+                                .onTapGesture {
+                                    vm.selectedTask = task
+                                    isEditViewPresented = true
+                                }
                             }
-                            .onTapGesture {
-                                vm.selectedTask = task
-                                isEditViewPresented = true
-                            }
+                            
+                            // MARK: Delete Item From List
+                            .onDelete(perform: vm.deleteTask)
+                            
+                            // MARK: Edit View
+                            .sheet(isPresented: $isEditViewPresented, content: {
+                                if let taskToEdit = vm.selectedTask {
+                                    EditTaskView(task: taskToEdit)
+                                }
+                            })
                         }
-                        
-                        // MARK: Delete Item From List
-                        .onDelete(perform: vm.deleteTask)
-                        
-                        // MARK: Edit View
-                        .sheet(isPresented: $isEditViewPresented, content: {
-                            if let taskToEdit = vm.selectedTask {
-                                EditTaskView(task: taskToEdit)
-                            }
-                        })
+                        .listStyle(.plain)
                     }
-                    .listStyle(.plain)
                 }
             }
             // MARK: - Navigation Bar
