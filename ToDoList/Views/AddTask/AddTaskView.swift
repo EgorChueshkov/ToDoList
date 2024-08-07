@@ -27,6 +27,7 @@ struct AddTaskView: View {
                 CustomButton(titleButton: "Add Task") {
                     vm.addTask(task: vm.newTask)
                 }
+                .disabled(vm.newTask.isEmpty)
                 
                 Spacer()
             }
