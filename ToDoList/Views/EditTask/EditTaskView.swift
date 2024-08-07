@@ -50,6 +50,9 @@ struct EditTaskView: View {
         .background(
             BackgroundView()
         )
+        .onAppear() {
+            vm.newTask = task.title
+        }
     }
 }
 
