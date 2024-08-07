@@ -10,9 +10,15 @@ import Foundation
 class ViewModel: ObservableObject {
    
     // MARK: - Properties
-    @Published var tasks: [TaskModel] = []
     @Published var newTask = ""
     @Published var selectedTask: TaskModel?
+    @Published var tasks: [TaskModel] = [] {
+        didSet {
+            saveTask()
+        }
+    }
+    
+    let keyUD = "keyUD"
     
     // Progress View Property
     var completionRate: Double {
@@ -21,7 +27,33 @@ class ViewModel: ObservableObject {
         return totalTasks > 0 ? Double(complrtionTasks) / Double(totalTasks) : 0
     }
     
+    // MARK: - Initializer
+    init() {
+        getTasks()
+    }
+    
     // MARK: - Methods
+    func saveTask() {
+        do {
+            let encodeTask = try JSONEncoder().encode(tasks)
+            UserDefaults.standard.set(encodeTask, forKey: keyUD)
+        } catch {
+            print("Error saving task: \(error)")
+        }
+    }
+    
+    func getTasks() {
+        guard let data = UserDefaults.standard.data(forKey: keyUD) else { return }
+        do {
+            let decodeTasks = try JSONDecoder().decode([TaskModel].self, from: data)
+            DispatchQueue.main.async {
+                self.tasks = decodeTasks
+            }
+        } catch {
+            print("Error loading tasks: \(error)")
+        }
+    }
+    
     func addTask (task: String) {
         let newTask = TaskModel(title: task)
         tasks.append(newTask)
