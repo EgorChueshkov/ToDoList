@@ -50,6 +50,14 @@ struct TaskListView: View {
                             })
                         }
                         .listStyle(.plain)
+                        
+                        // MARK: Progress View
+                        ProgressView("Completion Task", value: vm.completionRate)
+                            .progressViewStyle(LinearProgressViewStyle())
+                            .accentColor(Color.toDoListPrimary)
+                            .padding()
+                            .cornerRadius(10)
+                            .padding(.horizontal)
                     }
                 }
             }
