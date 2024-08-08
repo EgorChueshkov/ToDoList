@@ -42,6 +42,7 @@ struct TaskRow: View {
     }
 }
 
+// MARK: - Preview
 #Preview {
     List {
         TaskRow(model: TaskModel(title: "Task 1", isCompleted: true)) {}

@@ -38,7 +38,10 @@ struct EditTaskView: View {
                     .padding(.vertical)
             }
             
+            // MARK: Text Field
             CustomeTextField(placeholder: "Edit Your Task")
+            
+            // MARK: Edit Task Button
             CustomButton(titleButton: "Save") {
                 vm.updateTask(id: task.id, title: vm.newTask)
             }
